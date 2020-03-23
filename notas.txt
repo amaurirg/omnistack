@@ -1,0 +1,6 @@
+Cria o arquivo package.json que armazena informações e dependências do projeto
+    npm init -y
+
+Framework para dar um startup na app que faz as configurações mínimas do navegador
+    npm install express
+
