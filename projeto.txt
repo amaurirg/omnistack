@@ -1,0 +1,13 @@
+Entidades (Tudo aquilo que representa algo que será salvo no DB):
+    ONG
+    Caso (incident)
+
+Funcionalidades:
+    Login da ONG
+    Logout da ONG
+    Cadastro de ONG
+    Cadastro de novos casos
+    Deletar casos
+    Listar casos específicos de uma ONG
+    Listar todos os casos
+    Entrar em contato com a ONG
