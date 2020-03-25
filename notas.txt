@@ -4,3 +4,43 @@ Cria o arquivo package.json que armazena informações e dependências do projet
 Framework para dar um startup na app que faz as configurações mínimas do navegador
     npm install express
 
+Pacote que reinicia o node automaticamente. O "-D" significa para dev e não prod
+    npm install nodemon -D
+    No package.json verá que ele é uma dependência de dev e não do projeto
+    Altere o script "test" para: "start": "nodemon index.js" e inicie o servidor:
+        npm start
+
+Instalar Knex que é um Query Builder para utilizar código JS para todos os DBs
+    npm install knex
+
+Instalar sqlite
+    npm install sqlite3
+
+Para criar o arquivo knexfile.js de configurações de acesso ao DB
+    npx knex init
+
+Migrations:
+    Instalar
+        npx knex migrate: make create_ongs
+        create_ongs é o nome da migration
+    Mostrar todos os comandos:
+        npx knex
+    Aplicar as migrações:
+        npx knex migrate:latest
+    Voltar migrações:
+        npx knex migrate:rollback
+    Visualizar as migrations executadas:
+        npx knex migrate:status
+
+Para instalar o módulo de segurança cors que determinará quem irá acessar a app
+    npm install cors
+
+
+Tipos de parâmetros:
+    Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
+        Ex: users?nome=Amauri
+    Route Params: Parâmetros utilizados para identificar recursos
+        Ex: users/1
+    Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
+        Ex: {"name": "Amauri", "idade": 45}
+
