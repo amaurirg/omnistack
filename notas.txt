@@ -32,9 +32,17 @@ Migrations:
     Visualizar as migrations executadas:
         npx knex migrate:status
 
-Para instalar o módulo de segurança cors que determinará quem irá acessar a app
+Instalar o módulo de segurança cors que determinará quem irá acessar a app
     npm install cors
 
+Instalar pacote com ícones
+    npm install react-icons
+
+Instalar pacote de rotas
+    npm install react-router-dom
+
+Cliente HTTP para fazer chamada a api do backend
+    npm install axios
 
 Tipos de parâmetros:
     Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)

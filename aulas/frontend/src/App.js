@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './global.css';
+import Routes from './routes';  // não precisa colocar index pq o React já sabe
+
 
 function App() {
+  // useState começa em 0 e funciona assim: 
+  // [variável (counter), função que atualiza o estado (setCounter)]
+  // const [counter, setCounter] = useState(0);
+
+  // function increment() {
+  //   setCounter(counter + 1);
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Omnistack
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Header title="Semana Omnistack" />
+    // <div>
+    //   <Header>Contador: {counter}</Header>
+    //   <button onClick={increment}>Incrementar</button>
+    // </div>
+    <Routes />
   );
 }
 
