@@ -1,0 +1,19 @@
+Iniciar servidor
+    npm start
+    Abrirá uma guia no browser http://localhost:19002/ onde aparecerá o QR Code
+        Escaneie com o Expo instalado no celular para que o projeto apareça no mobile
+        Chacoalhe o celular duas vezes para aparecer o menu
+
+Enviar e-mail pelo app (Mail Composer do Expo)
+    expo install expo-mail-composer
+
+Enviar Whatsapp pelo app
+    Quase todo app do celular possui uma tecnologia "Deep Linking" para serem acessados.
+    Utiliza-se Linking importando-o de 'react-native'
+
+Conectar com a api
+    npm install axios
+
+Para formatar o número em moeda no Android:
+    npm install intl
+    

@@ -44,6 +44,22 @@ Instalar pacote de rotas
 Cliente HTTP para fazer chamada a api do backend
     npm install axios
 
+Instalar Expo (-g para global, usar em todo o sistema do computador)
+    npm install -g expo-cli
+    Criar um projeto chamado mobile
+        expo init mobile
+
+Instalar pacotes de rotas para navegação (https://docs.expo.io/versions/latest/)
+    Em search: routing (https://docs.expo.io/versions/latest/guides/routing-and-navigation/)
+        Em React Navigation => reactnavigation.org => Read docs (https://reactnavigation.org/docs/getting-started)
+            npm install @react-navigation/native
+            expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+            Em "Hello React Navigation" instale a navegação por botões e não por menu, exemplo
+                npm install @react-navigation/stack
+
+Instalar Constants para estilização
+    expo install expo-constants
+
 Tipos de parâmetros:
     Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
         Ex: users?nome=Amauri
