@@ -16,4 +16,7 @@ Conectar com a api
 
 Para formatar o número em moeda no Android:
     npm install intl
-    
+
+Para fazer validação dos dados usamos o celebrate que integra o Joi com Express
+    https://github.com/arb/celebrate
+    npm install celebrate
