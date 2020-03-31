@@ -20,3 +20,10 @@ Para formatar o número em moeda no Android:
 Para fazer validação dos dados usamos o celebrate que integra o Joi com Express
     https://github.com/arb/celebrate
     npm install celebrate
+    Joi
+        https://github.com/hapijs/joi
+        Na documentação poderá ver as verificações
+        https://hapi.dev/module/joi/api/
+
+
+
