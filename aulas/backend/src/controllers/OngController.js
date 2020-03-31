@@ -1,3 +1,5 @@
+const generateUniqueId = require('../utils/generateUniqueId');
+
 // pacote que vem com o node, usaremos um método para gerar uma string aleatória
 const crypto = require('crypto');
 
@@ -18,12 +20,12 @@ module.exports = {
         // const data = request.body;    // acessa o corpo enviado do tipo json (ex. no Insomnia)
         // desestruturação para pegar cada dado em uma variável separada
         const { name, email, whatsapp, city, uf } = request.body;
-
-        // gera uma string com 4 bytes hexadecimais
-        const id = crypto.randomBytes(4).toString('HEX');
         // Para body em json tem que informar ao node: app.use(express.json());
         // console.log(data);    // { name: 'Amauri', idade: 45 }
         // return response.send(params);
+
+        // gera uma string com 4 bytes hexadecimais
+        const id = generateUniqueId();
 
         await connection('ongs').insert({
             id,

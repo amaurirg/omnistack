@@ -68,3 +68,51 @@ Tipos de parâmetros:
     Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
         Ex: {"name": "Amauri", "idade": 45}
 
+Instalar framework de testes Jest
+    npm install jest
+    Iniciar o Jest  
+        npx jest --init
+            Quando perguntar se deseja adicionar um script de teste dentro do package.json para rodar os scripts de teste, responda sim "y"
+            Quando perguntar se deseja executar os scripts no node ou browser, responda node.
+            Quando perguntar se cada coisa que fizer em um teste não seja válido para outro teste, responda sim "y".
+            Será criado o arquivo jest.config.js
+            Exemplo de teste:
+                describe('Generate Unique ID', () => {
+                    it('should generate an unique ID', () => {
+                        expect(2+2).toBe(4);  // espera-se que 2+2 seja 4
+                    });
+                });
+
+                describe => nome do teste
+                it => descrição do teste
+
+Tipos de testes
+    integration:
+        testam fluxo de uma rota inteira da app
+    unit:
+        testam uma função específica da app de forma muito isolada
+
+Para utilizar variáveis de ambiente
+    Dúvidas sobre variáveis de ambiente:
+        https://blog.rocketseat.com.br/variaveis-ambiente-nodejs/
+    Instalar cross-env
+        https://github.com/kentcdodds/cross-env
+        npm install cross-env
+    Em knesfile.js:
+      test: {
+        client: 'sqlite3',
+        connection: {
+        filename: './src/database/test.sqlite'
+        },
+        migrations: {
+        directory: './src/database/migrations'
+        },
+        useNullAsDefault: true, // para que os campos do sqlite possam ser nulos por padrão
+      },
+    Em package.json, teremos uma variável de ambiente disponível com o script "test" :
+        "test": "cross-env NODE_ENV=test jest"
+    Para pegar uma variável de ambiente no node:
+        const env = process.env.NODE_ENV
+
+Instalar supertest (modo dev) para fazer requisições HTTP a api e validações nos testes
+    npm install supertest -D
